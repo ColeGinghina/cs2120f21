@@ -1,6 +1,10 @@
 import algebra.big_operators tactic.ring
 
 /-
+Cole Ginghina, ctg8h, https://github.com/ColeGinghina/cs2120f21 
+-/
+
+/-
 Read, understand (collaborating if necessary) the material
 in chapter 17 of Jeremy Avigad's *Logic and Proof.* It's here:
 https://leanprover.github.io/logic_and_proof/the_natural_numbers_and_induction.html
@@ -59,9 +63,6 @@ NOT FINALIZED. ADVISORY.
 def sum_of_squares : ℕ → ℕ
 | 0 := 0
 | (nat.succ n) := (sum_of_squares n) + (n.succ * n.succ)
-
-#eval sum_of_squares 4
-#eval sum_of_squares 5
 
 def P : ℕ → Prop := λ n, 6 * sum_of_squares (n) = n * (n + 1) * ((2 * n) + 1)
 
